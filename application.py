@@ -109,7 +109,8 @@ def logout():
     # Requirement 2.1 and 2.2
     # Use the "user" variable above to determine which endpoint to redirect to
     # Use assumption 1 to determine whether the user is admin user or general user
-
+    if "@gmail.com" in user:
+        return flask.redirect("/")
     return flask.redirect("/admin")
 
 
