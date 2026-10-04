@@ -82,10 +82,16 @@ def search():
         elif search_criteria == "Tags" and search_data in photo.tags:
             matching_photos.append(photo)
 
+    if len(matching_photos) > 0:
+        status = "Matching photos found"
+    else:
+        status = "No matching photos found"
+
     upload_form_display = "display:none;" if "@gmail.com" in username else "display:block;"
     return render_template("photo-portal.html",
                            username=username,
                            upload_form_display=upload_form_display,
+                           photo_upload_status=status,
                            photo_list=matching_photos)
 
 

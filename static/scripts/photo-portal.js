@@ -10,16 +10,16 @@ function validate_data() {
 
   if (option == "Date") {
     if (!/^\d{2}\/\d{2}\/\d{4}$/.test(input_text)) {
-      alert("Date format is: MM/DD/YYYY");
+      alert("Date format should be MM/DD/YYYY");
       return false;
     }
   }
   if (option == "Name" && input_text == "") {
-    alert("Name input cannot be empty");
+    alert("Name should not be empty");
     return false;
   }
   if (option == "Tags" && input_text == "") {
-    alert("Tags input cannot be empty");
+    alert("Tags should not be empty");
     return false;
   }
   return true;
