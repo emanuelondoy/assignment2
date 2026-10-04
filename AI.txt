@@ -1,0 +1,3 @@
+Gemini 3.5 Flash-Lite
+- Why is this code not running
+- How do I properly run this code
