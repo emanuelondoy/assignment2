@@ -1,0 +1,75 @@
+Portal started...
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://192.168.1.69:5009
+Press CTRL+C to quit
+127.0.0.1 - - [03/Oct/2026 21:52:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:54:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:54:33] "GET /static/images/longhorn.png HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:54:54] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:54:54] "GET /static/scripts/photo-portal.js HTTP/1.1" 200 -
+Logout called.
+Before returning...
+127.0.0.1 - - [03/Oct/2026 21:54:58] "POST /logout HTTP/1.1" 302 -
+127.0.0.1 - - [03/Oct/2026 21:54:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:54:58] "GET /static/images/longhorn.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:55:29] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:55:29] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+Logout called.
+Before returning...
+127.0.0.1 - - [03/Oct/2026 21:55:52] "POST /logout HTTP/1.1" 302 -
+127.0.0.1 - - [03/Oct/2026 21:55:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:55:52] "GET /static/images/longhorn.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:55:59] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:55:59] "GET /static/images/longhorn.png HTTP/1.1" 304 -
+Username:admin
+Password:secret
+User photos:
+[]
+---
+127.0.0.1 - - [03/Oct/2026 21:56:05] "POST /adminlogin HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:56:05] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+Inside upload_photo
+File Name:sunset.png
+
+Date taken:01/02/2020
+Tags:beach, summer
+127.0.0.1 - - [03/Oct/2026 21:57:14] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:57:14] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:57:14] "GET /static/images/photos/sunset.png HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:58:17] "GET /static/images/photos/sunset.png HTTP/1.1" 304 -
+Inside upload_photo
+File Name:notes.png
+
+Date taken:03/04/2021
+Tags:class
+127.0.0.1 - - [03/Oct/2026 21:59:02] "POST /upload HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:02] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:02] "GET /static/images/photos/sunset.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:02] "GET /static/images/photos/notes.png HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:13] "POST /search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:13] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:13] "GET /static/images/photos/sunset.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:22] "POST /search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:22] "GET /static/images/photos/notes.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:22] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:30] "POST /search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:30] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:30] "GET /static/images/photos/sunset.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:37] "POST /search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:37] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+Logout called.
+Before returning...
+127.0.0.1 - - [03/Oct/2026 21:59:46] "POST /logout HTTP/1.1" 302 -
+127.0.0.1 - - [03/Oct/2026 21:59:46] "GET /admin HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:46] "GET /static/images/longhorn.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 21:59:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 21:59:58] "GET /static/images/longhorn.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 22:00:02] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:00:02] "GET /static/images/photos/sunset.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 22:00:02] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 22:00:02] "GET /static/images/photos/notes.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 22:00:08] "POST /search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 22:00:08] "GET /static/images/photos/sunset.png HTTP/1.1" 304 -
+127.0.0.1 - - [03/Oct/2026 22:00:08] "GET /static/scripts/photo-portal.js HTTP/1.1" 304 -
