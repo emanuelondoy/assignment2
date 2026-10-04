@@ -162,11 +162,14 @@
 					<div>
 						<h6>Thumbnails:</h6>
 						<ol id="available_photos_list">
-							<!-- Requirement 4.1, 4,2, 4.3 -->
-							<!-- See: 
-								1. https://jinja.palletsprojects.com/en/3.0.x/templates/ 
-                                				2. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
-							-->
+							{% for photo in photo_list %}
+							<li>
+								<figure>
+									<img src="../static/images/photos/{{photo.name}}" height="60" width="60" data-toggle="modal" data-target="#imageModal" onclick="preview_photo('{{photo.name}}')">
+									<figcaption>{{photo.name}}</figcaption>
+								</figure>
+							</li>
+							{% endfor %}
 						</ol>
 					</div>
 				</div> <!-- row2 -->

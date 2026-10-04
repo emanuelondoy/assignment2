@@ -14,7 +14,14 @@ function show_photo_details(photo_name, date_taken, tags) {
 
 // Requirement 4.3 - Implement the preview_photo method that displays the photo in modal
 function preview_photo(photo_name) {
-
+  var previousImg = document.getElementById("preview-image");
+  if (previousImg != null) {
+    previousImg.parentNode.removeChild(previousImg);
+  }
+  var preview_img = document.createElement("img");
+  preview_img.setAttribute("id", "preview-image");
+  preview_img.setAttribute("src", "../static/images/photos/" + photo_name);
+  document.getElementById("image-modal-body").appendChild(preview_img);
 }
 
 
