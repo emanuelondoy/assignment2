@@ -151,7 +151,11 @@ def adminlogin():
 def login():
     user = request.form["gmail"].strip()
     flask.session["username"] = user
-    return render_template("photo-portal.html", username=user, photo_list=photos)
+    return render_template("photo-portal.html",
+                           upload_form_display="display:none;",
+                           username=user,
+                           photo_upload_status="TODO: Implement slide-show functionality",
+                           photo_list=photos)
 
 
 @app.route("/admin")
