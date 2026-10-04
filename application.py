@@ -147,6 +147,11 @@ def adminlogin():
 # 1.3.1 Set the status as per the requirements and pass it in the render_template
 # 1.3.2 Set the upload_form_display status appropriately so that the photo upload form is not visible. 
 # 1.4 Save the logged in user's name in flask session and pass that in the render_template for username parameter.
+@app.route("/login", methods=["POST"])
+def login():
+    user = request.form["gmail"].strip()
+    flask.session["username"] = user
+    return render_template("photo-portal.html", username=user, photo_list=photos)
 
 
 @app.route("/admin")
@@ -158,7 +163,9 @@ def adminindex():
 # Render index.html for the route "/" (refer to adminindex method above)
 # You need to add index.html - refer to adminindex.html
 # Add only one input box in index.html (see requirement 1.1 in assignment description)
-
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
