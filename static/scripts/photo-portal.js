@@ -5,6 +5,24 @@ function validate_data() {
   // Use document.getElementById()
   // return false if the data validation checks fail. Also raise appropriate alert.
   // return true if the data validation checks pass.
+  var option = document.getElementById("search_select").value;
+  var input_text = document.getElementById("search_input").value.trim();
+
+  if (option == "Date") {
+    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(input_text)) {
+      alert("Date format is: MM/DD/YYYY");
+      return false;
+    }
+  }
+  if (option == "Name" && input_text == "") {
+    alert("Name input cannot be empty");
+    return false;
+  }
+  if (option == "Tags" && input_text == "") {
+    alert("Tags input cannot be empty");
+    return false;
+  }
+  return true;
 }
 
 function show_photo_details(photo_name, date_taken, tags) {
